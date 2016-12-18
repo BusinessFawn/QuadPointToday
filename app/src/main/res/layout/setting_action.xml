@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/host_name"
+        android:inputType="phone"
+        android:hint="127.0.0.1"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/port_number"
+        android:layout_below="@+id/host_name"
+        android:inputType="number"
+        android:hint="8000"/>
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/connect_button"
+        android:id="@+id/connect_tcp"
+        android:layout_below="@+id/port_number"
+        android:onClick="settingsUpdate"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/connect_tcp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Use JSON?"/>
+        <Switch
+            android:key="useJson"
+            android:summary="Do you want to use JSON?"
+            android:title="JSON"
+            android:id="@+id/switch_JSON"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="updateJSON"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

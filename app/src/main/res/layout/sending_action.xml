@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/sending_action"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#c0ccd5"
+
+android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="3"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:id="@+id/product_wrap"
+    android:background="@drawable/product_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/wrap_two"
+        android:paddingBottom="32dp">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:id="@+id/button_one"
+            android:src="@drawable/binary_sync_green"/>
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:id="@+id/button_two"
+            android:src="@drawable/data_sync_green"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/wrap_four"
+        android:paddingBottom="32dp">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:id="@+id/button_three"
+            android:src="@drawable/report_green"
+            />
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:id="@+id/button_four"
+            android:src="@drawable/order_green"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/wrap_five"
+        android:paddingBottom="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:id="@+id/button_five"
+                android:background="@drawable/round_button"
+                android:text="M"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:id="@+id/button_six"
+                android:background="@drawable/round_button"
+                android:text="e"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+            </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_below="@id/product_wrap"
+    android:id="@+id/wrap_six"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:id="@+id/send_tcp"
+        android:src="@drawable/send_button"
+        android:onClick="sendMessage"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center"
+    android:id="@+id/connection_status"
+    android:layout_weight="1"
+    android:textSize="24sp"
+    android:textColor="#fff"
+    android:fontFamily="sans-serif-condensed"
+    android:textAlignment="center"
+    tools:text="Status: Connected"/>
+
+
+</LinearLayout>
